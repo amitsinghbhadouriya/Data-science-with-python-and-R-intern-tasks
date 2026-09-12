@@ -15,7 +15,6 @@ def zscore(s):
     return (s - s.mean()) / s.std(ddof=1)
 
 def run_analysis(df):
-    # Expected scikit-learn frame columns include age, sex, bmi, bp and target.
     d = df[["age", "sex", "bmi", "bp", "target"]].dropna().copy()
     d = d.rename(columns={"target": "disease_progression"})
 
