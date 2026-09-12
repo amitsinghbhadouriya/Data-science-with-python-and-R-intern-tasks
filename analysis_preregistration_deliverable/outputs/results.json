@@ -1,0 +1,23 @@
+{
+  "n": 442,
+  "primary_bmi_beta": 0.5725379042000543,
+  "primary_bmi_p": 1.391952565263917e-39,
+  "primary_bmi_ci95": [
+    0.4954195213642835,
+    0.6496562870358252
+  ],
+  "robust_hc3_bmi_beta": 0.5725379042000543,
+  "robust_hc3_bmi_p": 7.320299597114029e-43,
+  "r_squared": 0.3509243728489839,
+  "breusch_pagan_p": 0.002755769222700533,
+  "max_abs_standardized_residual": 2.5460617035959925,
+  "vif": {
+    "bmi_z": 1.0389508423815486,
+    "age_z": 1.0629606894048622,
+    "sex_z": 1.0345888249568513
+  },
+  "secondary_bp_adjusted_bmi_beta": 0.4862288181230248,
+  "secondary_bp_adjusted_bmi_p": 5.342369573720964e-29,
+  "spearman_rho": 0.5613820101065616,
+  "spearman_p": 4.5670239277250324e-38
+}

@@ -1,0 +1,12 @@
+name: preregistration-analysis
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12.6
+  - numpy=2.1.3
+  - pandas=2.2.3
+  - scipy=1.14.1
+  - scikit-learn=1.5.2
+  - statsmodels=0.14.4
+  - matplotlib=3.9.2
+  - pytest=8.3.3

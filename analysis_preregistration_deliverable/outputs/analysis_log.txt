@@ -1,0 +1,5 @@
+Preregistered analysis executed.
+Primary model: standardized disease progression ~ standardized BMI + standardized age + standardized sex
+N=442
+Primary BMI beta=0.572538
+Primary BMI p=1.39195e-39
