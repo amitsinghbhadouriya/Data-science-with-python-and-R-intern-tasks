@@ -9,8 +9,11 @@ def standardize_behavioral_features(df):
     Z = scaler.fit_transform(df[FEATURE_COLUMNS])
     return Z, scaler
 
-def evaluate_kmeans_clustering(Z, n_clusters=3, random_state=42):
+def run_clustering_pipeline(df, n_clusters=3, random_state=42):
+    Z, scaler = standardize_behavioral_features(df)
     km = KMeans(n_clusters=n_clusters, n_init=20, random_state=random_state)
     labels = km.fit_predict(Z)
     sil = silhouette_score(Z, labels)
-    return km, labels, sil
+    df_clustered = df.copy()
+    df_clustered["cluster"] = labels
+    return df_clustered, sil
