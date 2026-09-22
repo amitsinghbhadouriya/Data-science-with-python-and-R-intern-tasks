@@ -17,3 +17,13 @@ def run_clustering_pipeline(df, n_clusters=3, random_state=42):
     df_clustered = df.copy()
     df_clustered["cluster"] = labels
     return df_clustered, sil
+
+def compute_cluster_summary(df_clustered):
+    summary = df_clustered.groupby("cluster").agg(
+        transactions=("transaction_id", "count"),
+        avg_amount=("amount", "mean"),
+        fraud_rate=("is_fraud", "mean"),
+        avg_failed_attempts=("failed_attempts", "mean"),
+        avg_hour=("hour", "mean")
+    ).reset_index()
+    return summary
