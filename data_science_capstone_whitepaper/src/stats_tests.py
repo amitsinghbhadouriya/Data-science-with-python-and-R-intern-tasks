@@ -12,3 +12,15 @@ def run_amount_mann_whitney(df):
         "statistic": float(stat),
         "p_value": float(pval)
     }
+
+def run_failed_attempts_mann_whitney(df):
+    fraud = df.loc[df["is_fraud"] == 1, "failed_attempts"]
+    normal = df.loc[df["is_fraud"] == 0, "failed_attempts"]
+    stat, pval = mannwhitneyu(fraud, normal, alternative="two-sided")
+    return {
+        "variable": "Failed attempts",
+        "fraud_median": float(fraud.median()),
+        "normal_median": float(normal.median()),
+        "statistic": float(stat),
+        "p_value": float(pval)
+    }
