@@ -10,7 +10,10 @@ def get_model_suite():
         "Logistic Regression": Pipeline([
             ("scale", StandardScaler()),
             ("model", LogisticRegression(max_iter=2000, class_weight="balanced", random_state=42))
-        ])
+        ]),
+        "Random Forest": RandomForestClassifier(
+            n_estimators=300, max_depth=6, class_weight="balanced", random_state=42
+        )
     }
 
 def split_train_test(df, test_size=0.25, random_state=42):
