@@ -1,13 +1,14 @@
 import pandas as pd
-import numpy as np
+from scipy.stats import mannwhitneyu
 
-def compute_summary_statistics(df):
-    total = len(df)
-    fraud_count = int(df["is_fraud"].sum())
-    fraud_rate = df["is_fraud"].mean()
+def run_amount_mann_whitney(df):
+    fraud = df.loc[df["is_fraud"] == 1, "amount"]
+    normal = df.loc[df["is_fraud"] == 0, "amount"]
+    stat, pval = mannwhitneyu(fraud, normal, alternative="two-sided")
     return {
-        "total_rows": total,
-        "fraud_count": fraud_count,
-        "fraud_rate": fraud_rate,
-        "unique_customers": df["customer_id"].nunique()
+        "variable": "Amount",
+        "fraud_median": float(fraud.median()),
+        "normal_median": float(normal.median()),
+        "statistic": float(stat),
+        "p_value": float(pval)
     }
