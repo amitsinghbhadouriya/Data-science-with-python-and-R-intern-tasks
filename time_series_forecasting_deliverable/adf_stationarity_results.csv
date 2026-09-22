@@ -1,0 +1,4 @@
+Series,ADF statistic,p-value,Lags,Observations,Stationary at 5%
+Original,-0.9038698873856358,0.7866953368372336,7,22,False
+1st difference,-2.233624012735412,0.19426893706635678,6,22,False
+2nd difference,-15.186988638006376,6.085057742440131e-28,5,22,True
