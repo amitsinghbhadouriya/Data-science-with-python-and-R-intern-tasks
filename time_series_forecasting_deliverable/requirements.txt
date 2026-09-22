@@ -1,1 +1,7 @@
-# Requirements for Task 05
+pandas
+numpy
+matplotlib
+scikit-learn
+statsmodels
+jupyter
+notebook
