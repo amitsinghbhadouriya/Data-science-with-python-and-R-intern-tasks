@@ -171,3 +171,34 @@ Each project is self-contained with its own datasets, executable pipelines or no
 | **`dimensionality_reduction_clustering_task`** | Unsupervised Learning | Scikit-learn Iris dataset | PCA (2D/3D), K-Means (Elbow + Silhouette), DBSCAN, Agglomerative | Jupyter Notebook |
 | **`analysis_preregistration_deliverable`** | Confirmatory Statistics | Scikit-learn Diabetes dataset | Multiple Linear Regression (OLS), Data-blind pipeline testing | Preregistration Markdown, Python Script, Pytest |
 | **`advanced_statistical_analysis_task`** | Inferential Statistics | Scikit-learn Wine dataset | Welch's t-test, Mann–Whitney U, One-Way/Two-Way ANOVA, Tukey HSD, Levene | Jupyter Notebook |
+
+---
+
+## ⚙️ Environment Setup & Installation
+
+To run any or all of the projects in this repository:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/amitsinghbhadouriya/Data-science-with-python-and-R-intern-tasks.git
+   cd Data-science-with-python-and-R-intern-tasks
+   ```
+
+2. **Create and activate a virtual environment:**
+   ```bash
+   # Windows PowerShell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+
+   # Linux / macOS
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. **Install dependencies for a specific module** by navigating to that project folder and using its respective `requirements.txt` (or install standard data science packages: `numpy`, `pandas`, `scipy`, `statsmodels`, `scikit-learn`, `matplotlib`, `seaborn`, `pytest`, `jupyter`).
+
+---
+
+## 👤 Author
+
+* **Amit Singh Bhadouriya**
