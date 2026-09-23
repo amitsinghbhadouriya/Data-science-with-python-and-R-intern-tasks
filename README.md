@@ -121,3 +121,21 @@ Each project is self-contained with its own datasets, executable pipelines or no
   pip install -r requirements.txt
   jupyter notebook Dimensionality_Reduction_Unsupervised_Clustering.ipynb
   ```
+
+---
+
+### 4. [analysis_preregistration_deliverable](./analysis_preregistration_deliverable/)
+* **Project Title:** BMI and 1-Year Disease Progression — Preregistered Analysis  
+* **Problem Type:** Confirmatory Hypothesis Testing & Open Science Methodology  
+* **Core Research Question:** Is baseline Body Mass Index (BMI) independently associated with one-year quantitative disease progression after adjusting for age and biological sex?  
+* **Key Components & Deliverables:**
+  * **Preregistration Document:** [`preregistration.md`](./analysis_preregistration_deliverable/preregistration.md) — locked, timestamped analysis specification defined prior to examining outcome relationships to prevent p-hacking and HARKing.
+  * **Deviation Record:** [`deviations.md`](./analysis_preregistration_deliverable/deviations.md) logging protocol fidelity.
+  * **Synthetic Pipeline Test:** [`tests/test_pipeline.py`](./analysis_preregistration_deliverable/tests/test_pipeline.py) enabling data-blind pipeline verification.
+  * **Analysis Script:** [`analysis.py`](./analysis_preregistration_deliverable/analysis.py) computing regression coefficients, confidence intervals, model $R^2$, and logging all metrics to `outputs/`.
+* **How to Run:**
+  ```bash
+  cd analysis_preregistration_deliverable
+  pytest -q
+  python analysis.py
+  ```
