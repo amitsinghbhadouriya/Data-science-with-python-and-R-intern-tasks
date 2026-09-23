@@ -82,3 +82,21 @@ Each project is self-contained with its own datasets, executable pipelines or no
   python -m pytest tests/
   python src/capstone_analysis.py data/capstone_demo_dataset.csv
   ```
+
+---
+
+### 2. [time_series_forecasting_deliverable](./time_series_forecasting_deliverable/)
+* **Project Title:** Daily Demand Time-Series Forecasting with SARIMA  
+* **Problem Type:** Univariate Time-Series Decomposition, Stationarity Testing & Forecasting  
+* **Core Focus:** Modeling historical demand patterns, weekly seasonality ($m=7$), and delivering a robust 30-day out-of-sample demand forecast.  
+* **Key Components & Deliverables:**
+  * **Interactive Notebook:** [`time_series_forecasting_SARIMA.ipynb`](./time_series_forecasting_deliverable/time_series_forecasting_SARIMA.ipynb) with full outputs, diagnostic plots, and markdown evaluations.
+  * **Statistical Artifacts:** [`adf_stationarity_results.csv`](./time_series_forecasting_deliverable/adf_stationarity_results.csv) verifying series stationarity and [`sarima_model_selection_results.csv`](./time_series_forecasting_deliverable/sarima_model_selection_results.csv) detailing AIC-ranked SARIMA configurations.
+  * **Forecast Deliverable:** [`30_day_forecast.csv`](./time_series_forecasting_deliverable/30_day_forecast.csv) containing projected demand and 95% confidence intervals.
+  * **Generated Visualizations:** Diagnostic figures covering historical trends, seasonal decomposition, holdout test set validation, and future projections.
+* **How to Run:**
+  ```bash
+  cd time_series_forecasting_deliverable
+  pip install -r requirements.txt
+  jupyter notebook time_series_forecasting_SARIMA.ipynb
+  ```
