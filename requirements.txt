@@ -1,0 +1,20 @@
+# Core Scientific & Data Processing
+numpy>=1.23.0
+pandas>=1.5.0
+scipy>=1.9.0
+
+# Statistical Modeling & Machine Learning
+statsmodels>=0.13.0
+scikit-learn>=1.1.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+
+# Notebook Environment
+jupyter>=1.0.0
+ipykernel>=6.0.0
+nbformat>=5.5.0
+
+# Testing & Quality Assurance
+pytest>=7.0.0
