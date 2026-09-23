@@ -100,3 +100,24 @@ Each project is self-contained with its own datasets, executable pipelines or no
   pip install -r requirements.txt
   jupyter notebook time_series_forecasting_SARIMA.ipynb
   ```
+
+---
+
+### 3. [dimensionality_reduction_clustering_task](./dimensionality_reduction_clustering_task/)
+* **Project Title:** Dimensionality Reduction & Unsupervised Clustering  
+* **Problem Type:** Feature Extraction, Dimensionality Reduction & Cluster Analysis  
+* **Core Focus:** Evaluating cluster separation and structural discovery on multivariate feature spaces.  
+* **Key Components & Deliverables:**
+  * **Interactive Notebook:** [`Dimensionality_Reduction_Unsupervised_Clustering.ipynb`](./dimensionality_reduction_clustering_task/Dimensionality_Reduction_Unsupervised_Clustering.ipynb).
+  * **Implemented Techniques:**
+    * **Feature Standardization:** `StandardScaler` data normalization.
+    * **PCA (Principal Component Analysis):** Scree plot analysis, cumulative explained variance ratio, 2D and 3D visual projections.
+    * **K-Means Clustering:** Inertia Elbow Method and Silhouette Coefficient optimization across $k \in [2, 10]$.
+    * **DBSCAN (Density-Based Clustering):** Epsilon ($\epsilon$) and `min_samples` parameter tuning with automated noise detection.
+    * **Hierarchical / Agglomerative Clustering:** Ward linkage computation and cluster boundary comparisons.
+* **How to Run:**
+  ```bash
+  cd dimensionality_reduction_clustering_task
+  pip install -r requirements.txt
+  jupyter notebook Dimensionality_Reduction_Unsupervised_Clustering.ipynb
+  ```
