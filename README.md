@@ -1,5 +1,10 @@
 # Data Science & Machine Learning Internship Portfolio
 
+[![Python Version](https://img.shields.io/badge/python-3.9%20%7C%203.10%20%7C%203.11-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Code Style: PEP 8](https://img.shields.io/badge/code%20style-PEP%208-orange.svg)](https://peps.python.org/pep-0008/)
+[![Test Suite](https://img.shields.io/badge/tests-pytest%20passing-brightgreen.svg)](#-verification--testing)
+
 A comprehensive collection of data science, statistical analysis, machine learning, and time-series forecasting projects developed during the Data Science Internship.
 
 ---
@@ -9,6 +14,16 @@ A comprehensive collection of data science, statistical analysis, machine learni
 This repository documents end-to-end practical implementations spanning classical hypothesis testing, preregistered epidemiological modeling, unsupervised clustering & dimensionality reduction, seasonal time-series forecasting, and an applied machine learning capstone research paper.
 
 Each project is self-contained with its own datasets, executable pipelines or notebooks, unit tests, generated visual figures, and documentation.
+
+### Quick Links
+- [📂 Project Directory Structure](#-project-directory-structure)
+- [🔍 Detailed Folder & Module Breakdown](#-detailed-folder--module-breakdown)
+- [📊 Summary Comparison Matrix](#-summary-comparison-of-modules)
+- [⚙️ Environment Setup & Installation](#️-environment-setup--installation)
+- [🧪 Verification & Testing](#-verification--testing)
+- [📖 Replication Guide](docs/REPLICATION.md)
+- [📐 Architecture & Methodology](docs/ARCHITECTURE.md)
+- [🗃️ Dataset Registry](docs/DATA_REGISTRY.md)
 
 ---
 
@@ -61,6 +76,7 @@ Each project is self-contained with its own datasets, executable pipelines or no
         └── README.md                       # Statistical task documentation
 ```
 
+
 ---
 
 ## 🔍 Detailed Folder & Module Breakdown
@@ -83,6 +99,7 @@ Each project is self-contained with its own datasets, executable pipelines or no
   python src/capstone_analysis.py data/capstone_demo_dataset.csv
   ```
 
+
 ---
 
 ### 2. [time_series_forecasting_deliverable](./time_series_forecasting_deliverable/)
@@ -100,6 +117,7 @@ Each project is self-contained with its own datasets, executable pipelines or no
   pip install -r requirements.txt
   jupyter notebook time_series_forecasting_SARIMA.ipynb
   ```
+
 
 ---
 
@@ -122,6 +140,7 @@ Each project is self-contained with its own datasets, executable pipelines or no
   jupyter notebook Dimensionality_Reduction_Unsupervised_Clustering.ipynb
   ```
 
+
 ---
 
 ### 4. [analysis_preregistration_deliverable](./analysis_preregistration_deliverable/)
@@ -139,6 +158,7 @@ Each project is self-contained with its own datasets, executable pipelines or no
   pytest -q
   python analysis.py
   ```
+
 
 ---
 
@@ -160,6 +180,7 @@ Each project is self-contained with its own datasets, executable pipelines or no
   jupyter notebook Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb
   ```
 
+
 ---
 
 ## 📊 Summary Comparison of Modules
@@ -171,6 +192,7 @@ Each project is self-contained with its own datasets, executable pipelines or no
 | **`dimensionality_reduction_clustering_task`** | Unsupervised Learning | Scikit-learn Iris dataset | PCA (2D/3D), K-Means (Elbow + Silhouette), DBSCAN, Agglomerative | Jupyter Notebook |
 | **`analysis_preregistration_deliverable`** | Confirmatory Statistics | Scikit-learn Diabetes dataset | Multiple Linear Regression (OLS), Data-blind pipeline testing | Preregistration Markdown, Python Script, Pytest |
 | **`advanced_statistical_analysis_task`** | Inferential Statistics | Scikit-learn Wine dataset | Welch's t-test, Mann–Whitney U, One-Way/Two-Way ANOVA, Tukey HSD, Levene | Jupyter Notebook |
+
 
 ---
 
@@ -202,3 +224,15 @@ To run any or all of the projects in this repository:
 ## 👤 Author
 
 * **Amit Singh Bhadouriya**
+
+## 🧪 Verification & Testing
+
+To run the unified test suite across all projects:
+```bash
+python scripts/run_all_tests.py
+```
+
+To validate all deliverables and output files:
+```bash
+python scripts/validate_deliverables.py
+```
