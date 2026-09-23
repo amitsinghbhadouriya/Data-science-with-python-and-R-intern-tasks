@@ -28,8 +28,8 @@ def main():
         if not test_dir.exists():
             continue
         total_suites += 1
-        print(f"\n[RUNNING] {name} in {test_dir.relative_to(WORKSPACE)}...")
-        res = subprocess.run([sys.executable, "-m", "pytest", str(test_dir), "-q"], cwd=str(WORKSPACE))
+        suite_cwd = str(test_dir.parent)
+        res = subprocess.run([sys.executable, "-m", "pytest", str(test_dir), "-q"], cwd=suite_cwd)
         if res.returncode == 0:
             print(f"[PASS] {name} completed successfully.")
             total_passed += 1
