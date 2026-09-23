@@ -139,3 +139,23 @@ Each project is self-contained with its own datasets, executable pipelines or no
   pytest -q
   python analysis.py
   ```
+
+---
+
+### 5. [advanced_statistical_analysis_task](./advanced_statistical_analysis_task/)
+* **Project Title:** Advanced Statistical Analysis & Hypothesis Testing  
+* **Problem Type:** Inferential Statistics, Distribution Testing & Factorial ANOVA  
+* **Core Focus:** Rigorous statistical evaluation across multi-group continuous datasets.  
+* **Key Components & Deliverables:**
+  * **Executable Notebook:** [`Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb`](./advanced_statistical_analysis_task/advanced_statistical_analysis_task/Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb).
+  * **Implemented Statistical Methods:**
+    * **Normality Assessment:** Shapiro–Wilk test, Kolmogorov–Smirnov test, histograms, and Q-Q plots.
+    * **Two-Sample Testing:** Welch's Two-Sample t-test (heteroscedasticity-robust), Mann–Whitney U non-parametric test, 95% Confidence Intervals, and Cohen's $d$ effect size.
+    * **One-Way ANOVA:** Analysis of variance across class groupings, Levene's test for variance homogeneity, and Tukey's HSD post-hoc pairwise analysis.
+    * **Two-Way Factorial ANOVA:** Main effects, interaction term analysis, and Partial Eta-Squared ($\eta_p^2$) effect size computations.
+* **How to Run:**
+  ```bash
+  cd advanced_statistical_analysis_task/advanced_statistical_analysis_task
+  pip install -r requirements.txt
+  jupyter notebook Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb
+  ```
