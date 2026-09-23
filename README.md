@@ -159,3 +159,15 @@ Each project is self-contained with its own datasets, executable pipelines or no
   pip install -r requirements.txt
   jupyter notebook Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb
   ```
+
+---
+
+## 📊 Summary Comparison of Modules
+
+| Folder / Deliverable | Domain / Focus | Key Dataset | Primary Methods & Algorithms | Deliverable Format |
+|---|---|---|---|---|
+| **`data_science_capstone_whitepaper`** | Fraud Risk & Predictive Modeling | Financial transactions dataset | Random Forest, Logistic Regression, K-Means ($k=3$), Mann–Whitney U | Whitepaper PDF, Python CLI Pipeline, Notebook, Tests |
+| **`time_series_forecasting_deliverable`** | Demand Forecasting | Daily demand series | SARIMA $(p,d,q)	imes(P,D,Q)_7$, ADF Test, Additive Decomposition | Jupyter Notebook, Forecast CSVs, Plots |
+| **`dimensionality_reduction_clustering_task`** | Unsupervised Learning | Scikit-learn Iris dataset | PCA (2D/3D), K-Means (Elbow + Silhouette), DBSCAN, Agglomerative | Jupyter Notebook |
+| **`analysis_preregistration_deliverable`** | Confirmatory Statistics | Scikit-learn Diabetes dataset | Multiple Linear Regression (OLS), Data-blind pipeline testing | Preregistration Markdown, Python Script, Pytest |
+| **`advanced_statistical_analysis_task`** | Inferential Statistics | Scikit-learn Wine dataset | Welch's t-test, Mann–Whitney U, One-Way/Two-Way ANOVA, Tukey HSD, Levene | Jupyter Notebook |
