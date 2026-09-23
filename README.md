@@ -60,3 +60,25 @@ Each project is self-contained with its own datasets, executable pipelines or no
         ├── requirements.txt                # Required libraries
         └── README.md                       # Statistical task documentation
 ```
+
+---
+
+## 🔍 Detailed Folder & Module Breakdown
+
+### 1. [data_science_capstone_whitepaper](./data_science_capstone_whitepaper/)
+* **Project Title:** Financial Transaction Fraud Risk & Pattern Analysis  
+* **Problem Type:** Supervised Binary Classification & Unsupervised Behavioral Profiling  
+* **Core Research Question:** Can transaction amount, failed-attempt frequency, account age, and transaction timing reliably predict fraudulent transactions?  
+* **Key Components & Deliverables:**
+  * **Formal Whitepaper:** [Data_Science_Capstone_Whitepaper.pdf](./data_science_capstone_whitepaper/report/Data_Science_Capstone_Whitepaper.pdf) — publication-grade capstone research report.
+  * **Pipeline Script:** [`src/capstone_analysis.py`](./data_science_capstone_whitepaper/src/capstone_analysis.py) — modular end-to-end data processing, statistical validation, model training, and reporting pipeline.
+  * **Interactive Notebook:** [`notebooks/01_capstone_analysis.ipynb`](./data_science_capstone_whitepaper/notebooks/01_capstone_analysis.ipynb).
+  * **Test Suite:** [`tests/test_models.py`](./data_science_capstone_whitepaper/tests/test_models.py) verifying data processing and model validity.
+  * **Results & Metrics:** Benchmark logs in [`results/`](./data_science_capstone_whitepaper/results/) comparing Logistic Regression vs. Random Forest, alongside K-Means behavioral clustering summaries ($k=3$) and Mann–Whitney U test statistics.
+* **How to Run:**
+  ```bash
+  cd data_science_capstone_whitepaper
+  pip install -r requirements.txt
+  python -m pytest tests/
+  python src/capstone_analysis.py data/capstone_demo_dataset.csv
+  ```
