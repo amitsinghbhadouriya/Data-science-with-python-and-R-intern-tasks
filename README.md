@@ -81,43 +81,41 @@ Each project is self-contained with its own datasets, executable pipelines or no
 
 ## 🔍 Detailed Folder & Module Breakdown
 
-### 1. [data_science_capstone_whitepaper](./data_science_capstone_whitepaper/)
-* **Project Title:** Financial Transaction Fraud Risk & Pattern Analysis  
-* **Problem Type:** Supervised Binary Classification & Unsupervised Behavioral Profiling  
-* **Core Research Question:** Can transaction amount, failed-attempt frequency, account age, and transaction timing reliably predict fraudulent transactions?  
+### 1. [analysis_preregistration_deliverable](./analysis_preregistration_deliverable/)
+* **Project Title:** BMI and 1-Year Disease Progression — Preregistered Analysis  
+* **Problem Type:** Confirmatory Hypothesis Testing & Open Science Methodology  
+* **Core Research Question:** Is baseline Body Mass Index (BMI) independently associated with one-year quantitative disease progression after adjusting for age and biological sex?  
 * **Key Components & Deliverables:**
-  * **Formal Whitepaper:** [Data_Science_Capstone_Whitepaper.pdf](./data_science_capstone_whitepaper/report/Data_Science_Capstone_Whitepaper.pdf) — publication-grade capstone research report.
-  * **Pipeline Script:** [`src/capstone_analysis.py`](./data_science_capstone_whitepaper/src/capstone_analysis.py) — modular end-to-end data processing, statistical validation, model training, and reporting pipeline.
-  * **Interactive Notebook:** [`notebooks/01_capstone_analysis.ipynb`](./data_science_capstone_whitepaper/notebooks/01_capstone_analysis.ipynb).
-  * **Test Suite:** [`tests/test_models.py`](./data_science_capstone_whitepaper/tests/test_models.py) verifying data processing and model validity.
-  * **Results & Metrics:** Benchmark logs in [`results/`](./data_science_capstone_whitepaper/results/) comparing Logistic Regression vs. Random Forest, alongside K-Means behavioral clustering summaries ($k=3$) and Mann–Whitney U test statistics.
+  * **Preregistration Document:** [`preregistration.md`](./analysis_preregistration_deliverable/preregistration.md) — locked, timestamped analysis specification defined prior to examining outcome relationships to prevent p-hacking and HARKing.
+  * **Deviation Record:** [`deviations.md`](./analysis_preregistration_deliverable/deviations.md) logging protocol fidelity.
+  * **Synthetic Pipeline Test:** [`tests/test_pipeline.py`](./analysis_preregistration_deliverable/tests/test_pipeline.py) enabling data-blind pipeline verification.
+  * **Analysis Script:** [`analysis.py`](./analysis_preregistration_deliverable/analysis.py) computing regression coefficients, confidence intervals, model $R^2$, and logging all metrics to `outputs/`.
 * **How to Run:**
   ```bash
-  cd data_science_capstone_whitepaper
-  pip install -r requirements.txt
-  python -m pytest tests/
-  python src/capstone_analysis.py data/capstone_demo_dataset.csv
+  cd analysis_preregistration_deliverable
+  pytest -q
+  python analysis.py
   ```
-
 
 ---
 
-### 2. [time_series_forecasting_deliverable](./time_series_forecasting_deliverable/)
-* **Project Title:** Daily Demand Time-Series Forecasting with SARIMA  
-* **Problem Type:** Univariate Time-Series Decomposition, Stationarity Testing & Forecasting  
-* **Core Focus:** Modeling historical demand patterns, weekly seasonality ($m=7$), and delivering a robust 30-day out-of-sample demand forecast.  
+### 2. [advanced_statistical_analysis_task](./advanced_statistical_analysis_task/)
+* **Project Title:** Advanced Statistical Analysis & Hypothesis Testing  
+* **Problem Type:** Inferential Statistics, Distribution Testing & Factorial ANOVA  
+* **Core Focus:** Rigorous statistical evaluation across multi-group continuous datasets.  
 * **Key Components & Deliverables:**
-  * **Interactive Notebook:** [`time_series_forecasting_SARIMA.ipynb`](./time_series_forecasting_deliverable/time_series_forecasting_SARIMA.ipynb) with full outputs, diagnostic plots, and markdown evaluations.
-  * **Statistical Artifacts:** [`adf_stationarity_results.csv`](./time_series_forecasting_deliverable/adf_stationarity_results.csv) verifying series stationarity and [`sarima_model_selection_results.csv`](./time_series_forecasting_deliverable/sarima_model_selection_results.csv) detailing AIC-ranked SARIMA configurations.
-  * **Forecast Deliverable:** [`30_day_forecast.csv`](./time_series_forecasting_deliverable/30_day_forecast.csv) containing projected demand and 95% confidence intervals.
-  * **Generated Visualizations:** Diagnostic figures covering historical trends, seasonal decomposition, holdout test set validation, and future projections.
+  * **Executable Notebook:** [`Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb`](./advanced_statistical_analysis_task/advanced_statistical_analysis_task/Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb).
+  * **Implemented Statistical Methods:**
+    * **Normality Assessment:** Shapiro–Wilk test, Kolmogorov–Smirnov test, histograms, and Q-Q plots.
+    * **Two-Sample Testing:** Welch's Two-Sample t-test (heteroscedasticity-robust), Mann–Whitney U non-parametric test, 95% Confidence Intervals, and Cohen's $d$ effect size.
+    * **One-Way ANOVA:** Analysis of variance across class groupings, Levene's test for variance homogeneity, and Tukey's HSD post-hoc pairwise analysis.
+    * **Two-Way Factorial ANOVA:** Main effects, interaction term analysis, and Partial Eta-Squared ($\eta_p^2$) effect size computations.
 * **How to Run:**
   ```bash
-  cd time_series_forecasting_deliverable
+  cd advanced_statistical_analysis_task/advanced_statistical_analysis_task
   pip install -r requirements.txt
-  jupyter notebook time_series_forecasting_SARIMA.ipynb
+  jupyter notebook Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb
   ```
-
 
 ---
 
@@ -140,47 +138,43 @@ Each project is self-contained with its own datasets, executable pipelines or no
   jupyter notebook Dimensionality_Reduction_Unsupervised_Clustering.ipynb
   ```
 
-
 ---
 
-### 4. [analysis_preregistration_deliverable](./analysis_preregistration_deliverable/)
-* **Project Title:** BMI and 1-Year Disease Progression — Preregistered Analysis  
-* **Problem Type:** Confirmatory Hypothesis Testing & Open Science Methodology  
-* **Core Research Question:** Is baseline Body Mass Index (BMI) independently associated with one-year quantitative disease progression after adjusting for age and biological sex?  
+### 4. [time_series_forecasting_deliverable](./time_series_forecasting_deliverable/)
+* **Project Title:** Daily Demand Time-Series Forecasting with SARIMA  
+* **Problem Type:** Univariate Time-Series Decomposition, Stationarity Testing & Forecasting  
+* **Core Focus:** Modeling historical demand patterns, weekly seasonality ($m=7$), and delivering a robust 30-day out-of-sample demand forecast.  
 * **Key Components & Deliverables:**
-  * **Preregistration Document:** [`preregistration.md`](./analysis_preregistration_deliverable/preregistration.md) — locked, timestamped analysis specification defined prior to examining outcome relationships to prevent p-hacking and HARKing.
-  * **Deviation Record:** [`deviations.md`](./analysis_preregistration_deliverable/deviations.md) logging protocol fidelity.
-  * **Synthetic Pipeline Test:** [`tests/test_pipeline.py`](./analysis_preregistration_deliverable/tests/test_pipeline.py) enabling data-blind pipeline verification.
-  * **Analysis Script:** [`analysis.py`](./analysis_preregistration_deliverable/analysis.py) computing regression coefficients, confidence intervals, model $R^2$, and logging all metrics to `outputs/`.
+  * **Interactive Notebook:** [`time_series_forecasting_SARIMA.ipynb`](./time_series_forecasting_deliverable/time_series_forecasting_SARIMA.ipynb) with full outputs, diagnostic plots, and markdown evaluations.
+  * **Statistical Artifacts:** [`adf_stationarity_results.csv`](./time_series_forecasting_deliverable/adf_stationarity_results.csv) verifying series stationarity and [`sarima_model_selection_results.csv`](./time_series_forecasting_deliverable/sarima_model_selection_results.csv) detailing AIC-ranked SARIMA configurations.
+  * **Forecast Deliverable:** [`30_day_forecast.csv`](./time_series_forecasting_deliverable/30_day_forecast.csv) containing projected demand and 95% confidence intervals.
+  * **Generated Visualizations:** Diagnostic figures covering historical trends, seasonal decomposition, holdout test set validation, and future projections.
 * **How to Run:**
   ```bash
-  cd analysis_preregistration_deliverable
-  pytest -q
-  python analysis.py
-  ```
-
-
----
-
-### 5. [advanced_statistical_analysis_task](./advanced_statistical_analysis_task/)
-* **Project Title:** Advanced Statistical Analysis & Hypothesis Testing  
-* **Problem Type:** Inferential Statistics, Distribution Testing & Factorial ANOVA  
-* **Core Focus:** Rigorous statistical evaluation across multi-group continuous datasets.  
-* **Key Components & Deliverables:**
-  * **Executable Notebook:** [`Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb`](./advanced_statistical_analysis_task/advanced_statistical_analysis_task/Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb).
-  * **Implemented Statistical Methods:**
-    * **Normality Assessment:** Shapiro–Wilk test, Kolmogorov–Smirnov test, histograms, and Q-Q plots.
-    * **Two-Sample Testing:** Welch's Two-Sample t-test (heteroscedasticity-robust), Mann–Whitney U non-parametric test, 95% Confidence Intervals, and Cohen's $d$ effect size.
-    * **One-Way ANOVA:** Analysis of variance across class groupings, Levene's test for variance homogeneity, and Tukey's HSD post-hoc pairwise analysis.
-    * **Two-Way Factorial ANOVA:** Main effects, interaction term analysis, and Partial Eta-Squared ($\eta_p^2$) effect size computations.
-* **How to Run:**
-  ```bash
-  cd advanced_statistical_analysis_task/advanced_statistical_analysis_task
+  cd time_series_forecasting_deliverable
   pip install -r requirements.txt
-  jupyter notebook Advanced_Statistical_Analysis_Hypothesis_Testing.ipynb
+  jupyter notebook time_series_forecasting_SARIMA.ipynb
   ```
 
+---
 
+### 5. [data_science_capstone_whitepaper](./data_science_capstone_whitepaper/)
+* **Project Title:** Financial Transaction Fraud Risk & Pattern Analysis  
+* **Problem Type:** Supervised Binary Classification & Unsupervised Behavioral Profiling  
+* **Core Research Question:** Can transaction amount, failed-attempt frequency, account age, and transaction timing reliably predict fraudulent transactions?  
+* **Key Components & Deliverables:**
+  * **Formal Whitepaper:** [Data_Science_Capstone_Whitepaper.pdf](./data_science_capstone_whitepaper/report/Data_Science_Capstone_Whitepaper.pdf) — publication-grade capstone research report.
+  * **Pipeline Script:** [`src/capstone_analysis.py`](./data_science_capstone_whitepaper/src/capstone_analysis.py) — modular end-to-end data processing, statistical validation, model training, and reporting pipeline.
+  * **Interactive Notebook:** [`notebooks/01_capstone_analysis.ipynb`](./data_science_capstone_whitepaper/notebooks/01_capstone_analysis.ipynb).
+  * **Test Suite:** [`tests/test_models.py`](./data_science_capstone_whitepaper/tests/test_models.py) verifying data processing and model validity.
+  * **Results & Metrics:** Benchmark logs in [`results/`](./data_science_capstone_whitepaper/results/) comparing Logistic Regression vs. Random Forest, alongside K-Means behavioral clustering summaries ($k=3$) and Mann–Whitney U test statistics.
+* **How to Run:**
+  ```bash
+  cd data_science_capstone_whitepaper
+  pip install -r requirements.txt
+  python -m pytest tests/
+  python src/capstone_analysis.py data/capstone_demo_dataset.csv
+  ```
 ---
 
 ## 📊 Summary Comparison of Modules
@@ -221,10 +215,6 @@ To run any or all of the projects in this repository:
 
 ---
 
-## 👤 Author
-
-* **Amit Singh Bhadouriya**
-
 ## 🧪 Verification & Testing
 
 To run the unified test suite across all projects:
@@ -236,3 +226,7 @@ To validate all deliverables and output files:
 ```bash
 python scripts/validate_deliverables.py
 ```
+
+## 👤 Author
+
+* **Amit Singh Bhadouriya**
